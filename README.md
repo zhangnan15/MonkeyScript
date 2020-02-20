@@ -1,2 +1,2 @@
-# MonkeyScript
-这个仓库用来存放一些自己写的油猴脚本
+# monkeyscripts
+这个仓库用来存放一些油猴脚本，同步greasyfork
