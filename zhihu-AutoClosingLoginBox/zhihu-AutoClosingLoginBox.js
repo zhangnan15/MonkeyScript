@@ -15,7 +15,7 @@
 /*     if($.cookie("unlock_ticket") || $.cookie("q_c1")){ */
     var c1 = document.cookie.indexOf("unlock_ticket=");
     var c2 = document.cookie.indexOf("q_c1=");
-    if(c1 != -1||c2 != -1){
+    if(c1 != -1 || c2 != -1){
     }else{
         var time1 = new Date();
         //保障于网速慢加载慢的时候
