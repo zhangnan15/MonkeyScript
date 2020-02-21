@@ -12,14 +12,14 @@
 // ==/UserScript==
 (function() {
     'use strict';
-/*     if($.cookie("unlock_ticket")||$.cookie("q_c1")){ */
-    var c=document.cookie.indexOf("unlock_ticket=");
-    var c2=document.cookie.indexOf("q_c1=");
-    if(c != -1||c2 != -1){
+/*     if($.cookie("unlock_ticket") || $.cookie("q_c1")){ */
+    var c1 = document.cookie.indexOf("unlock_ticket=");
+    var c2 = document.cookie.indexOf("q_c1=");
+    if(c1 != -1||c2 != -1){
     }else{
         var time1 = new Date();
         //保障于网速慢加载慢的时候
-        var no_m_no_s =setInterval(function(){
+        var no_m_no_s = setInterval(function(){
             var time2 = new Date();
             $(".Button.Modal-closeButton.Button--plain").trigger("click");
             //12秒结束后，开启滚轮
