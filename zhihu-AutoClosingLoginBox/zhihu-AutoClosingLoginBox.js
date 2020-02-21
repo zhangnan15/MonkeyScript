@@ -2,7 +2,7 @@
 // @name         知乎去掉登录框（关闭自己弹出来的登录框）
 // @namespace    https://github.com/zhangnan15/monkeyscripts
 // @version      0.1.0
-// @description  单一功能脚本，自动叉掉那两次自己弹出来的登录框，自行唤起的登录框不受影响
+// @description  单一功能脚本，自动叉掉弹出来的登录框
 // @author       zn1597
 // @match        https://www.zhihu.com/*
 // @grant        none
@@ -12,11 +12,13 @@
 // ==/UserScript==
 (function() {
     'use strict';
-    var guess_c1=document.cookie.indexOf("unlock_ticket=");
-    var guess_c2=document.cookie.indexOf("q_c1=");
-    if(guess_c1 != -1||guess_c1 != -1){
+/*     if($.cookie("unlock_ticket")||$.cookie("q_c1")){ */
+    var c=document.cookie.indexOf("unlock_ticket=");
+    var c2=document.cookie.indexOf("q_c1=");
+    if(c != -1||c2 != -1){
     }else{
         var time1 = new Date();
+        //保障于网速慢加载慢的时候
         var no_m_no_s =setInterval(function(){
             var time2 = new Date();
             $(".Button.Modal-closeButton.Button--plain").trigger("click");
@@ -39,7 +41,6 @@
                     $("button").unbind("mousedown");
                 });
             },100);
-            clearInterval(no_m_no_s);
             $(window).unbind("scroll");
             scroll();
         });
