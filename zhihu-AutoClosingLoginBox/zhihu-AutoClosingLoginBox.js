@@ -4,7 +4,7 @@
 // @version      0.1.0
 // @description  单一功能脚本，自动叉掉弹出来的登录框
 // @author       zn1597
-// @match        https://www.zhihu.com/*
+// @match        https://*.zhihu.com/*
 // @grant        none
 // @require      https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js
 // @require      https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js
